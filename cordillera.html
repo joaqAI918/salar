@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cordillera — a SALAR case study</title>
+  <meta name="description" content="How SALAR graded Cordillera: one Ektachrome-derived LUT, printer-light offsets per reel, and a day-for-dusk third act rescued in the grade." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0A08'/%3E%3Cg%3E%3Crect x='7' y='9' width='14' height='14' fill='%23FF2222'/%3E%3Crect x='10' y='7' width='14' height='14' fill='%2322FF44' style='mix-blend-mode:screen'/%3E%3Crect x='12' y='11' width='14' height='14' fill='%232255FF' style='mix-blend-mode:screen'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/fragment-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- SVG channel-isolation filters for the plates -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="plate-r" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+    </filter>
+    <filter id="plate-g" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+    </filter>
+    <filter id="plate-b" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+    </filter>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav__row">
+      <a class="split wordmark" href="index.html" aria-label="SALAR — inicio">
+        <span class="split__layer split__r" aria-hidden="true">SALAR</span>
+        <span class="split__layer split__g" aria-hidden="true">SALAR</span>
+        <span class="split__layer split__b" aria-hidden="true">SALAR</span>
+        <span class="split__ink">SALAR</span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html#trabajo">Trabajo</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero wrap" aria-label="Cordillera — case study">
+      <p class="mono hero__meta" lang="es">Caso / 01 — Largometraje · 96 min</p>
+      <h1 class="split hero__display">
+        <span class="split__layer split__r" aria-hidden="true">Cordillera</span>
+        <span class="split__layer split__g" aria-hidden="true">Cordillera</span>
+        <span class="split__layer split__b" aria-hidden="true">Cordillera</span>
+        <span class="split__ink">Cordillera</span>
+      </h1>
+      <p class="mono hero__tagline">ARRI ALEXA 35 · 2.39:1 · Rec.709 / Dolby Vision · dir. Valentina Reyes</p>
+    </section>
+
+    <section class="wrap case-brief" aria-labelledby="brief-h">
+      <h2 id="brief-h" class="fade">A salt hauler crosses the Atacama. The light never once helps him.</h2>
+      <div class="col">
+        <p class="fade"><span class="mono">The film — </span>Cordillera was shot over five weeks at four thousand meters, almost entirely in natural light. A desert western: one man, one truck, and the whitest ground on Earth.</p>
+        <p class="fade"><span class="mono">The problem — </span>High-altitude sun is merciless. Chalk highlights, black shadows, and a UV haze that pushes every wide shot toward blue. The dailies looked thin — correct, but thin.</p>
+        <p class="fade"><span class="mono">The approach — </span>We built a single LUT from Ektachrome 100 references and held it for the whole film. From there, printer-light offsets per reel; nothing keyframed. The third act&rsquo;s day-for-dusk was rescued in the grade — two stops down, highlights held, the red channel lifted just far enough to keep skin alive.</p>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="wipe-h">
+      <div class="section-head fade">
+        <p class="mono">Antes / Después</p>
+        <h2 id="wipe-h">The deliverable</h2>
+      </div>
+      <div class="wipe fade">
+        <img class="wipe__grade" src="assets/img/cordillera-1360.avif"
+             srcset="assets/img/cordillera-680.avif 680w, assets/img/cordillera-1024.avif 1024w, assets/img/cordillera-1360.avif 1360w"
+             sizes="(min-width: 1440px) 1312px, 92vw"
+             alt="Graded still from Cordillera: warm amber caustic light through rippled glass." />
+        <img class="wipe__log" src="assets/img/cordillera-1360.avif"
+             srcset="assets/img/cordillera-680.avif 680w, assets/img/cordillera-1024.avif 1024w, assets/img/cordillera-1360.avif 1360w"
+             sizes="(min-width: 1440px) 1312px, 92vw"
+             alt="" aria-hidden="true" />
+        <div class="wipe__handle" role="slider" tabindex="0" aria-label="Comparison between log and graded image"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal"></div>
+        <span class="mono wipe__label wipe__label--log">Log</span>
+        <span class="mono wipe__label wipe__label--grade">Grade</span>
+      </div>
+      <p class="plates__note fade">Drag the line, or focus it and use the arrow keys. The left side is what the camera saw; the right side is what the film needed.</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="plates-h">
+      <div class="section-head fade">
+        <p class="mono" lang="es">Canales</p>
+        <h2 id="plates-h">One image, three channels</h2>
+      </div>
+      <div class="plates">
+        <div class="plate plate--r fade">
+          <figure>
+            <img src="assets/img/cordillera-1024.avif" alt="The red channel of the Cordillera still, isolated." loading="lazy" />
+          </figure>
+          <figcaption class="mono" lang="es">Canal rojo</figcaption>
+        </div>
+        <div class="plate plate--g fade">
+          <figure>
+            <img src="assets/img/cordillera-1024.avif" alt="The green channel of the Cordillera still, isolated." loading="lazy" />
+          </figure>
+          <figcaption class="mono" lang="es">Canal verde</figcaption>
+        </div>
+        <div class="plate plate--b fade">
+          <figure>
+            <img src="assets/img/cordillera-1024.avif" alt="The blue channel of the Cordillera still, isolated." loading="lazy" />
+          </figure>
+          <figcaption class="mono" lang="es">Canal azul</figcaption>
+        </div>
+      </div>
+      <p class="plates__note fade">Every grade is only ever this: three grey images, weighed against each other until they agree.</p>
+    </section>
+
+    <section class="wrap pull-quote" aria-label="Quote from the director">
+      <blockquote class="fade">
+        <p>&ldquo;Emilia didn&rsquo;t color the film. She found the film we shot.&rdquo;</p>
+        <cite class="mono" lang="es">Valentina Reyes — Directora, Cordillera</cite>
+      </blockquote>
+    </section>
+
+    <section class="wrap" aria-labelledby="credits-h">
+      <div class="section-head fade">
+        <p class="mono" lang="es">Ficha técnica</p>
+        <h2 id="credits-h">Credits</h2>
+      </div>
+      <dl class="credits mono fade">
+        <div><dt lang="es">Dirección</dt><dd>Valentina Reyes</dd></div>
+        <div><dt lang="es">Fotografía</dt><dd>Diego Salas</dd></div>
+        <div><dt>Color</dt><dd>Emilia Contreras</dd></div>
+        <div><dt>Finishing</dt><dd>SALAR, Santiago</dd></div>
+        <div><dt lang="es">Formato</dt><dd>ARRI ALEXA 35 · 4.6K · 2.39:1</dd></div>
+        <div><dt lang="es">Entrega</dt><dd>DCP · Dolby Vision · Rec.709</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer__row mono">
+      <span lang="es">SALAR — Estudio de color · Santiago de Chile</span>
+      <span>SALAR is a fictional studio — a design portfolio piece</span>
+      <span><a href="index.html">← Volver</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
