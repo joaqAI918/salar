@@ -827,13 +827,7 @@ footer {
 }
 
 /* ---------- 404 ---------- */
-.notfound {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-block-end: clamp(48px, 8vh, 96px);
-}
+/* the section also carries .hero, which supplies the full-height flex column */
 
 .notfound__code {
   font-size: var(--size-display);
@@ -845,6 +839,22 @@ footer {
   flex-wrap: wrap;
   gap: 16px 48px;
   margin-block-start: clamp(32px, 5vh, 48px);
+}
+
+/* ---------- mobile hero rhythm ----------
+   Bottom-pinning reads as composed negative space on a wide desktop frame, but on a
+   tall, narrow viewport it strands the type under a dead gap. Centring keeps the same
+   generous emptiness and moves it below the block instead of above it.
+   Declared last so it wins over .case-hero, which sets its own justify-content. */
+@media (max-width: 640px) {
+  .hero,
+  .case-hero {
+    justify-content: center;
+  }
+
+  .case-hero {
+    padding-block-start: 96px; /* nav clearance only; the 140px desktop offset over-indents here */
+  }
 }
 
 /* ---------- reduced motion: final state, zero movement ---------- */
