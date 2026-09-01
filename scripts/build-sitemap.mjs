@@ -5,7 +5,7 @@ import { readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const BASE_URL = 'https://joadlpbec.github.io/salar/';
+const BASE_URL = 'https://joaqai918.github.io/salar/';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const EXCLUDE = new Set(['404.html']);
 

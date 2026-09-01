@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://joadlpbec.github.io/salar/sitemap.xml
+Sitemap: https://joaqai918.github.io/salar/sitemap.xml

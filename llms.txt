@@ -11,11 +11,11 @@ channel-split wordmark, log/grade image reveals, and channel-isolated plates.
 
 ## Pages
 
-- [Home](https://joadlpbec.github.io/salar/): studio identity, selected grades
+- [Home](https://joaqai918.github.io/salar/): studio identity, selected grades
   (Cordillera, Neón Austral, Mareas, La Ruta de la Sal, Fiebre), services
   (feature grading, commercial finishing, HDR/Dolby Vision, on-set DIT, remote
   sessions), studio details, and contact.
-- [Cordillera case study](https://joadlpbec.github.io/salar/cordillera.html):
+- [Cordillera case study](https://joaqai918.github.io/salar/cordillera.html):
   how the fictional feature "Cordillera" was graded — one Ektachrome-derived
   LUT, printer-light offsets per reel, a log/grade wipe comparison, and the
   image decomposed into its R/G/B channels.
