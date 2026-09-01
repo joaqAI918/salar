@@ -23,5 +23,13 @@ Blind hero comparison vs the reference (Vivid+Co): ours preferred.
   (Organization/WebSite/LocalBusiness/CreativeWork/ItemList), scripted sitemap.xml,
   robots.txt, llms.txt, favicon set (svg/ico/apple-touch), designed 1200×630 OG images,
   custom 404, internal links, no href="#", console check clean on all 3 pages.
-- Lighthouse (mobile sim): home 97/100/100/100 · case study 98/100/100/100. CLS 0.
-- Final sizes (gzip): JS 888 B · CSS 4.4 KB · fonts 107 KB · largest image variant 95 KB.
+- Lighthouse (localhost, mobile sim): home 97/100/100/100 · case 98/100/100/100.
+- DEPLOYED: https://joaqai918.github.io/salar/ (GitHub Pages, repo joaqAI918/salar; the
+  account turned out to be joaqAI918, not the guessed joadlpbec — base URL rewritten
+  everywhere before first push).
+- Live perf regression found (TBT 610ms: font-swap relayout landing after FCP on real
+  network) and fixed: content-visibility below fold, lean grain layer, compositor-promoted
+  hero layers, fonts instanced (Fraunces wght pinned 380) + hard-subset 107 KB → 53 KB.
+- **Lighthouse LIVE (final): home 100/100/100/100 · case 99/100/100/100.** LCP 1.3 s /
+  1.6 s, CLS 0, TBT 50 ms / 30 ms.
+- Final sizes (gzip): JS 888 B · CSS ~4.5 KB · fonts 53 KB · largest image variant 95 KB.
