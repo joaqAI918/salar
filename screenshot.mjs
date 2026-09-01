@@ -41,6 +41,13 @@ await page.emulateMediaFeatures([
   { name: 'prefers-color-scheme', value: 'dark' },
 ]);
 await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
+if (fullPage) {
+  // content-visibility:auto keeps far-off-screen sections unpainted, which is
+  // correct for users but blanks them in a full-page capture — force paint.
+  await page.addStyleTag({
+    content: 'main section { content-visibility: visible !important; contain-intrinsic-size: none !important; }',
+  });
+}
 if (args.includes('--scroll')) {
   // walk the page so IntersectionObserver reveals fire, then return to top
   await page.evaluate(async () => {

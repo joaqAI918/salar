@@ -109,12 +109,11 @@ a {
 /* ---------- grain (one overlay, whole site) ---------- */
 .grain {
   position: fixed;
-  inset: -50%;
-  width: 200%;
-  height: 200%;
+  inset: 0;
   pointer-events: none;
   z-index: 60;
   opacity: 0.028;
+  transform: translateZ(0);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -131,6 +130,12 @@ section {
 
 [id] {
   scroll-margin-top: 104px;
+}
+
+/* below-fold sections: skip initial layout/paint until near the viewport */
+main section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 .mono {
