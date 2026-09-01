@@ -5,14 +5,14 @@ import { readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const BASE_URL = 'https://joaqai918.github.io/salar/';
+const ORIGIN = 'https://salar.joaquinweb.cl';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const EXCLUDE = new Set(['404.html']);
 
 const pages = readdirSync(ROOT)
   .filter((f) => f.endsWith('.html') && !EXCLUDE.has(f))
   .map((f) => ({
-    loc: f === 'index.html' ? BASE_URL : BASE_URL + f,
+    loc: f === 'index.html' ? ORIGIN : `${ORIGIN}/${f}`,
     lastmod: statSync(join(ROOT, f)).mtime.toISOString().slice(0, 10),
   }));
 

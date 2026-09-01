@@ -24,9 +24,15 @@ Blind hero comparison vs the reference (Vivid+Co): ours preferred.
   robots.txt, llms.txt, favicon set (svg/ico/apple-touch), designed 1200×630 OG images,
   custom 404, internal links, no href="#", console check clean on all 3 pages.
 - Lighthouse (localhost, mobile sim): home 97/100/100/100 · case 98/100/100/100.
-- DEPLOYED: https://joaqai918.github.io/salar/ (GitHub Pages, repo joaqAI918/salar; the
-  account turned out to be joaqAI918, not the guessed joadlpbec — base URL rewritten
-  everywhere before first push).
+- DEPLOYED on GitHub Pages, repo joaqAI918/salar. First published at
+  joaqai918.github.io/salar/ (the account turned out to be joaqAI918, not the guessed
+  joadlpbec — base URL rewritten before first push).
+- **LIVE at https://salar.joaquinweb.cl** — custom domain (CNAME committed by GitHub;
+  the old github.io path now 301s here). All absolute URLs — canonical, og:url, og:image,
+  twitter:image, JSON-LD, sitemap, robots, llms.txt — moved to this origin, and the
+  `/salar/` path segment dropped since the domain serves from root. Site root is written
+  without a trailing slash; `BASE_URL` in build-sitemap.mjs became `ORIGIN` so path
+  joining stays correct.
 - Live perf regression found (TBT 610ms: font-swap relayout landing after FCP on real
   network) and fixed: content-visibility below fold, lean grain layer, compositor-promoted
   hero layers, fonts instanced (Fraunces wght pinned 380) + hard-subset 107 KB → 53 KB.

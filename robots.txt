@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://joaqai918.github.io/salar/sitemap.xml
+Sitemap: https://salar.joaquinweb.cl/sitemap.xml
