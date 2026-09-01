@@ -227,6 +227,12 @@ main section:not(:first-child) {
   pointer-events: none;
 }
 
+/* the hero layers animate continuously; keep them on compositor layers so the
+   channel drift never repaints the giant glyphs on the main thread */
+.hero .split__layer {
+  will-change: transform;
+}
+
 .split__r { color: var(--ch-r); }
 .split__g { color: var(--ch-g); }
 .split__b { color: var(--ch-b); }
