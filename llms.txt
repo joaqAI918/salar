@@ -1,0 +1,27 @@
+# SALAR
+
+> SALAR is a color grading and finishing studio in Santiago de Chile, working on
+> feature films, commercials, and music videos. This site is a design portfolio
+> piece: the studio, its people, and its projects are fictional, created to
+> demonstrate front-end design and brand craft.
+
+The site is a single long-scroll page plus one case study. Its design system is
+built on RGB channel separation — the colorist's actual material — rendered as a
+channel-split wordmark, log/grade image reveals, and channel-isolated plates.
+
+## Pages
+
+- [Home](https://joadlpbec.github.io/salar/): studio identity, selected grades
+  (Cordillera, Neón Austral, Mareas, La Ruta de la Sal, Fiebre), services
+  (feature grading, commercial finishing, HDR/Dolby Vision, on-set DIT, remote
+  sessions), studio details, and contact.
+- [Cordillera case study](https://joadlpbec.github.io/salar/cordillera.html):
+  how the fictional feature "Cordillera" was graded — one Ektachrome-derived
+  LUT, printer-light offsets per reel, a log/grade wipe comparison, and the
+  image decomposed into its R/G/B channels.
+
+## Notes
+
+- All imagery is abstract, AI-generated light phenomena (caustics, refraction,
+  beams through smoke) treated as graded film stills; nothing is photographic.
+- Contact details on the site are fictional.

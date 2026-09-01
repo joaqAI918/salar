@@ -42,7 +42,7 @@
   --font-body: 'Archivo', 'Helvetica Neue', sans-serif;
   --font-mono: 'Fragment Mono', 'Courier New', monospace;
 
-  --size-display: clamp(4.25rem, 17vw, 15rem);
+  --size-display: clamp(6rem, 17vw, 15rem);
   --size-display-sm: clamp(2.75rem, 7.5vw, 6.5rem);
   --size-heading: clamp(1.75rem, 3.2vw, 2.75rem);
   --size-body-lg: clamp(1.125rem, 1.6vw, 1.375rem);
@@ -52,6 +52,13 @@
   --ease: cubic-bezier(0.65, 0, 0.15, 1); /* the only curve */
   --gutter: clamp(20px, 4vw, 64px);
   --section-gap: clamp(96px, 12vw, 176px);
+}
+
+/* mobile: body drops to 16px so the 6rem display floor holds the 6x scale ratio */
+@media (max-width: 640px) {
+  :root {
+    --size-body: 1rem;
+  }
 }
 
 /* ---------- base ---------- */
@@ -491,21 +498,40 @@ section {
   grid-column: 2;
 }
 
-/* RGB parade divider — the instruments as ornament */
+.text-link {
+  color: var(--ink);
+  border-bottom: 1px solid var(--hairline);
+  transition: opacity 0.3s var(--ease);
+}
+
+.text-link:hover {
+  opacity: 0.6;
+}
+
+/* RGB parade divider — the colorist's instrument as ornament */
 .parade {
   display: grid;
-  gap: 6px;
+  grid-template-columns: 2.5rem 1fr auto;
+  gap: 10px 16px;
+  align-items: center;
   margin-block: clamp(48px, 7vw, 96px);
 }
 
-.parade span {
+.parade .bar {
   display: block;
-  height: 3px;
+  height: 8px;
 }
 
-.parade span:nth-child(1) { background: linear-gradient(to right, var(--ch-r) 0%, var(--ch-r) 62%, transparent 62%); opacity: 0.65; }
-.parade span:nth-child(2) { background: linear-gradient(to right, var(--ch-g) 0%, var(--ch-g) 47%, transparent 47%); opacity: 0.55; }
-.parade span:nth-child(3) { background: linear-gradient(to right, var(--ch-b) 0%, var(--ch-b) 78%, transparent 78%); opacity: 0.7; }
+.parade .lvl {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.parade .bar--r { background: var(--ch-r); width: 62%; opacity: 0.8; }
+.parade .bar--g { background: var(--ch-g); width: 47%; opacity: 0.65; }
+.parade .bar--b { background: var(--ch-b); width: 78%; opacity: 0.8; }
 
 /* ---------- estudio (band = the only elevation) ---------- */
 .estudio {
@@ -780,6 +806,34 @@ footer {
   font-size: var(--size-body);
   text-transform: none;
   letter-spacing: 0;
+}
+
+.case-next {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 48px;
+  margin-block-start: clamp(40px, 6vw, 64px);
+}
+
+/* ---------- 404 ---------- */
+.notfound {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-block-end: clamp(48px, 8vh, 96px);
+}
+
+.notfound__code {
+  font-size: var(--size-display);
+  display: block;
+}
+
+.notfound__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 48px;
+  margin-block-start: clamp(32px, 5vh, 48px);
 }
 
 /* ---------- reduced motion: final state, zero movement ---------- */

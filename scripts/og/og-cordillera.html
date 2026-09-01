@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: 'Fraunces';
+    font-weight: 340 400;
+    src: url('../../assets/fonts/fraunces-latin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Fragment Mono';
+    font-weight: 400;
+    src: url('../../assets/fonts/fragment-mono-latin.woff2') format('woff2');
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #0B0A08;
+    color: #EDE6DA;
+    font-family: 'Fraunces', serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .still {
+    position: absolute; inset: 0;
+    background: url('../../assets/img/src/cordillera.png') center 40% / cover no-repeat;
+  }
+  .shade {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(11,10,8,0.96) 22%, rgba(11,10,8,0.55) 55%, rgba(11,10,8,0.25));
+  }
+  .grain {
+    position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 72px 80px;
+  }
+  .mono {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8A8172;
+  }
+  .split { position: relative; font-weight: 360; font-variation-settings: 'opsz' 144; font-size: 150px; line-height: 0.95; letter-spacing: -0.03em; }
+  .split span { position: absolute; inset: 0; mix-blend-mode: screen; }
+  .split .r { color: #FF2222; transform: translate(-5px, -2px); }
+  .split .g { color: #22FF44; transform: translate(4px, 3px); }
+  .split .b { color: #2255FF; transform: translate(5px, -3px); }
+  .split .ink { position: relative; color: #EDE6DA; }
+  .meta { margin-bottom: 28px; }
+  .sub { margin-top: 24px; }
+</style>
+</head>
+<body>
+  <div class="still"></div>
+  <div class="shade"></div>
+  <div class="grain"></div>
+  <div class="content">
+    <p class="mono meta">Caso / 01 — Largometraje · ARRI ALEXA 35 · 2.39:1</p>
+    <div class="split"><span class="r">Cordillera</span><span class="g">Cordillera</span><span class="b">Cordillera</span><span class="ink">Cordillera</span></div>
+    <p class="mono sub">A SALAR case study — antes / después</p>
+  </div>
+</body>
+</html>
